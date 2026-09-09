@@ -1,0 +1,27 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies (browsers installed explicitly below)
+        run: npm ci
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+      - name: Install managed Chromium with system dependencies
+        run: npx playwright install --with-deps chromium
+      - name: Install FFmpeg (MP4 tests)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Run tests
+        run: npm test
+      - name: Export an example end to end
+        run: npm run export -- assets/arrival.svg --out example-arrival --duration 8 --width 1280 --fps 30 --formats svg,png,mp4

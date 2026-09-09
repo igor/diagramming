@@ -1,0 +1,23 @@
+{
+  "name": "diagram-authoring",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Agent skill and deterministic exporter for explanatory SVG diagrams (SVG, PNG, MP4).",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igor/diagram-authoring.git"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test scripts/export.test.mjs",
+    "export": "node scripts/export.mjs",
+    "browser:install": "playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "1.63.0"
+  }
+}

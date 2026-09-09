@@ -1,0 +1,52 @@
+{
+  "generator": "diagram-authoring export.mjs",
+  "input": {
+    "file": "convergence.svg",
+    "sha256": "e82c912b01a68d59d92d1475946811d75be479225f0954c1d7c9af1306ea3921",
+    "viewBox": {
+      "x": 0,
+      "y": 0,
+      "w": 720,
+      "h": 360
+    }
+  },
+  "output": {
+    "width": 1280,
+    "height": 640,
+    "duration": 8,
+    "fps": 30,
+    "time": 8,
+    "frameCount": 240,
+    "uniqueFrameCount": 91,
+    "formats": [
+      "svg",
+      "png",
+      "mp4"
+    ]
+  },
+  "motion": true,
+  "fonts": [
+    {
+      "family": "IBM Plex Sans",
+      "weight": "400",
+      "file": "plex-sans.woff2",
+      "license": "plex-sans-OFL.txt"
+    },
+    {
+      "family": "IBM Plex Mono",
+      "weight": "400",
+      "file": "plex-mono.woff2",
+      "license": "plex-mono-OFL.txt"
+    }
+  ],
+  "browser": "152.0.7977.83",
+  "files": {
+    "scene.svg": "9eebe9b6e9c933d5ccbfa9bf985a4eca32a277bf755cf8e4f98312f3e0731ddb",
+    "preview.html": "6c0a7ed63c6c97a1ff94fa9e07434a1871274b1f72bd6bda62297603297ff186",
+    "scene.png": "a5bd73a82ec5893ce0cbb733f5dc03ee160dca178b98e5d261b5ba9fa774438b",
+    "scene.static.svg": "74482a499ae667873096c1f946d355eb3cdb50c97129a41c22c2aab9af1c981a",
+    "scene.mp4": "aac914d898233f3cf57b158f12f5aeb09cd8bb446112f451442804a84b40e343",
+    "fonts/plex-sans-OFL.txt": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+    "fonts/plex-mono-OFL.txt": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+  }
+}

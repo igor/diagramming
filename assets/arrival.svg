@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img">
+  <title>Evidence intake: a new fragment fills the record's Context slot</title>
+  <desc>720 × 360 scene, 8 seconds. A "New evidence" source box sits left; a Record box titled "Record" with Definition, Context and Sources rows sits right. A corridor arrow leaves the source box and points into the Record's left edge at the Context row. A small emphasis chip leaves the source at 1s, travels the corridor, and stops at the Record's edge at 2.4s; between 2.4s and 2.8s the Record's empty Context slot fills with the emphasis color behind its dark label and stays filled through 8s. Definition's slot is filled from the start; Sources' slot stays empty. Base markup is the complete final state; animation starts on document load and does not loop.</desc>
+  <!-- ground: first visible rect paints the viewBox -->
+  <rect x="0" y="0" width="720" height="360" fill="#FFFFFF"/>
+  <!-- heading + explanatory caption (no technical timing or resolution copy) -->
+  <text x="24" y="40" font-family="IBM Plex Sans" font-size="24" fill="#17212B">Evidence intake</text>
+  <text x="24" y="64" font-family="IBM Plex Sans" font-size="14" fill="#4B5563">A new fragment of evidence fills the record's Context slot.</text>
+  <!-- source box -->
+  <rect x="24" y="112" width="176" height="128" fill="#FFFFFF" stroke="#6B7280" stroke-width="2"/>
+  <text x="40" y="144" font-family="IBM Plex Sans" font-size="20" fill="#17212B">New evidence</text>
+  <!-- corridor (outside both objects): connector with a directional arrowhead at the target edge -->
+  <line x1="200" y1="192" x2="412" y2="192" stroke="#6B7280" stroke-width="2"/>
+  <path d="M 412 184 L 424 192 L 412 200 Z" fill="#6B7280"/>
+  <!-- target record -->
+  <rect x="424" y="72" width="272" height="224" fill="#FFFFFF" stroke="#6B7280" stroke-width="2"/>
+  <text x="440" y="104" font-family="IBM Plex Sans" font-size="24" fill="#17212B">Record</text>
+  <!-- Definition row: slot already filled -->
+  <rect x="440" y="128" width="120" height="32" fill="#DBEAFE"/>
+  <text x="448" y="152" font-family="IBM Plex Sans" font-size="20" fill="#17212B">Definition</text>
+  <!-- Context row: empty slot fills when the fragment lands -->
+  <rect x="440" y="176" width="120" height="32" fill="none" stroke="#6B7280" stroke-width="2" stroke-dasharray="4 4" opacity="0">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.3;0.35;1" calcMode="spline" keySplines="0 0 1 1; 0.22 0.9 0.3 1; 0 0 1 1" dur="8s" begin="0s" fill="freeze"/>
+  </rect>
+  <rect x="440" y="176" width="120" height="32" fill="#DBEAFE" opacity="1">
+    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.3;0.35;1" calcMode="spline" keySplines="0 0 1 1; 0.22 0.9 0.3 1; 0 0 1 1" dur="8s" begin="0s" fill="freeze"/>
+  </rect>
+  <text x="448" y="200" font-family="IBM Plex Sans" font-size="20" fill="#17212B">Context</text>
+  <!-- Sources row: empty slot, stays empty -->
+  <rect x="440" y="224" width="120" height="32" fill="none" stroke="#6B7280" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="448" y="248" font-family="IBM Plex Sans" font-size="20" fill="#17212B">Sources</text>
+  <!-- incoming fragment: emphasis chip; base markup is its final state, parked at the record edge -->
+  <g id="chip" transform="translate(416 192)" opacity="0">
+    <rect x="-8" y="-8" width="16" height="16" fill="#DBEAFE" stroke="#17212B" stroke-width="2"/>
+    <animateMotion path="M -232 0 L 0 0" keyPoints="0;0;1;1" keyTimes="0;0.125;0.3;1" calcMode="spline" keySplines="0 0 1 1; 0.42 0 0.16 1; 0 0 1 1" dur="8s" begin="0s" fill="freeze"/>
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.3;0.35;1" calcMode="spline" keySplines="0 0 1 1; 0.22 0.9 0.3 1; 0 0 1 1" dur="8s" begin="0s" fill="freeze"/>
+  </g>
+</svg>

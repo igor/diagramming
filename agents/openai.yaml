@@ -1,0 +1,4 @@
+interface:
+  display_name: "Diagram Authoring"
+  short_description: "Experimental SVG diagram authoring and export"
+  default_prompt: "Use $diagram-authoring to explain this process as a readable diagram and export a still plus MP4."
