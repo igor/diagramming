@@ -52,6 +52,6 @@ The follow-up review returned no new findings and confirmed both initial actiona
 
 ## GitHub verification
 
-Commit `2924755` passed [GitHub Actions run 34349450854](https://github.com/igor/diagram-authoring/actions/runs/34349450854): clean checkout, Node 22, pinned dependency install, managed Chromium with system dependencies, FFmpeg, 43 tests passing with zero failures/skips, and a full example export. The run completed successfully in 1m43s. GitHub emitted a non-blocking annotation that its v4 checkout/setup-node action wrappers use the runner's Node 24 compatibility override; the actual project test runtime was Node 22 as configured.
+Commit `2924755` passed [GitHub Actions run 34349450854](https://github.com/igor/diagramming/actions/runs/34349450854): clean checkout, Node 22, pinned dependency install, managed Chromium with system dependencies, FFmpeg, 43 tests passing with zero failures/skips, and a full example export. The run completed successfully in 1m43s. GitHub emitted a non-blocking annotation that its v4 checkout/setup-node action wrappers use the runner's Node 24 compatibility override; the actual project test runtime was Node 22 as configured.
 
 All task worker terminals are closed. Final source comparison still confirms all 13 files of the personal skill unchanged. Repository visibility remains private. The final documentation-only handoff commit skips CI; no executable, dependency, workflow or example changed after the successful run.

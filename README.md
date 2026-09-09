@@ -1,4 +1,4 @@
-# diagram-authoring
+# diagramming
 
 An experimental agent skill and command-line toolkit for explanatory diagrams. Author one standalone SVG; the exporter deterministically produces a portable SVG, an offline HTML preview, a PNG still and an H.264 MP4.
 
@@ -21,8 +21,8 @@ Good use cases: information flows, document lifecycles, decisions and branching,
 From a clean clone (needs Node 22 or newer):
 
 ```sh
-git clone https://github.com/igor/diagram-authoring.git
-cd diagram-authoring
+git clone https://github.com/igor/diagramming.git
+cd diagramming
 npm ci
 npx playwright install chromium   # on Linux, use --with-deps chromium
 mkdir -p out
@@ -49,13 +49,13 @@ The repository root is the installable skill folder. `SKILL.md` is provider-neut
 ### Codex (personal)
 
 ```sh
-git clone https://github.com/igor/diagram-authoring.git ~/.agents/skills/diagram-authoring
-cd ~/.agents/skills/diagram-authoring
+git clone https://github.com/igor/diagramming.git ~/.agents/skills/diagramming
+cd ~/.agents/skills/diagramming
 npm ci
 npx playwright install chromium
 ```
 
-Invoke it in a conversation with `$diagram-authoring`. Codex discovers personal skills in `~/.agents/skills` and follows symlinked skill directories. [Codex skills documentation](https://learn.chatgpt.com/docs/build-skills), checked 2026-09-09.
+Invoke it in a conversation with `$diagramming`. Codex discovers personal skills in `~/.agents/skills` and follows symlinked skill directories. [Codex skills documentation](https://learn.chatgpt.com/docs/build-skills), checked 2026-09-09.
 
 For instructions-only use, the clone is sufficient. Export setup requires Node 22+, Linux browser system dependencies where applicable, and FFmpeg for video; see [Platform setup](#platform-setup).
 
@@ -63,18 +63,18 @@ Git refuses to clone into a non-empty destination, protecting an existing skill.
 
 ### Codex (project)
 
-Put the skill folder at `.agents/skills/diagram-authoring` inside your project — see [Project scope](#project-scope-both-harnesses) below for how to vendor it correctly. Same invocation: `$diagram-authoring`.
+Put the skill folder at `.agents/skills/diagramming` inside your project — see [Project scope](#project-scope-both-harnesses) below for how to vendor it correctly. Same invocation: `$diagramming`.
 
 ### Claude Code (personal)
 
 ```sh
-git clone https://github.com/igor/diagram-authoring.git ~/.claude/skills/diagram-authoring
-cd ~/.claude/skills/diagram-authoring
+git clone https://github.com/igor/diagramming.git ~/.claude/skills/diagramming
+cd ~/.claude/skills/diagramming
 npm ci
 npx playwright install chromium
 ```
 
-Invoke it with `/diagram-authoring`. Personal skills live in `~/.claude/skills` and project skills in `.claude/skills`; symlinked directories are supported. [Claude Code skills documentation](https://code.claude.com/docs/en/skills), checked 2026-09-09. Update the same way: `git pull --ff-only`, then `npm ci`. For instructions-only use, the clone is sufficient; export prerequisites are the same as above.
+Invoke it with `/diagramming`. Personal skills live in `~/.claude/skills` and project skills in `.claude/skills`; symlinked directories are supported. [Claude Code skills documentation](https://code.claude.com/docs/en/skills), checked 2026-09-09. Update the same way: `git pull --ff-only`, then `npm ci`. For instructions-only use, the clone is sufficient; export prerequisites are the same as above.
 
 ### Project scope (both harnesses)
 
@@ -82,9 +82,9 @@ For a project, vendor the folder rather than cloning into it. A `git clone` insi
 
 ```sh
 diagram_install_tmp="$(mktemp -d)"
-git clone https://github.com/igor/diagram-authoring.git "$diagram_install_tmp/source"
+git clone https://github.com/igor/diagramming.git "$diagram_install_tmp/source"
 # Run from the project root. For Claude Code, change .agents to .claude.
-diagram_skill_target=.agents/skills/diagram-authoring
+diagram_skill_target=.agents/skills/diagramming
 if [ -e "$diagram_skill_target" ] || [ -L "$diagram_skill_target" ]; then
   echo "Destination already exists; inspect it before updating."
 else
@@ -167,10 +167,10 @@ For animation, study `assets/arrival.svg`: the base markup is the complete final
 
 ## Sample prompts
 
-- Use $diagram-authoring to explain how a support ticket becomes a knowledge-base article, and export a 1280px still plus an 8-second MP4.
-- Use $diagram-authoring to draw a static comparison of two purchase-approval paths; export SVG and PNG only.
+- Use $diagramming to explain how a support ticket becomes a knowledge-base article, and export a 1280px still plus an 8-second MP4.
+- Use $diagramming to draw a static comparison of two purchase-approval paths; export SVG and PNG only.
 
-(With Claude Code, invoke the skill as `/diagram-authoring`; with other agents, point them at `SKILL.md` and run the CLI yourself.)
+(With Claude Code, invoke the skill as `/diagramming`; with other agents, point them at `SKILL.md` and run the CLI yourself.)
 
 ## Limitations
 

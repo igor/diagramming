@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// diagram-authoring — standalone SVG scene export pipeline.
+// diagramming — standalone SVG scene export pipeline.
 //
 //   node scripts/export.mjs INPUT.svg --out NEW_DIRECTORY [--duration 8] [--width 1280]
 //        [--fps 30] [--time 8] [--formats svg,png,mp4] [--fonts /path/to/fonts.json]
@@ -752,7 +752,7 @@ export async function runExport(a) {
       files['fonts/' + f.licenseOut] = sha256(buf);
     }
     const manifest = {
-      generator: 'diagram-authoring export.mjs',
+      generator: 'diagramming export.mjs',
       input: { file: path.basename(inputPath), sha256: sha256(rawBuf), viewBox: vb },
       output: { width: w, height: h, duration: a.duration, fps: a.fps, time: a.time,
         frameCount, uniqueFrameCount, formats: a.formats },

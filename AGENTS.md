@@ -1,4 +1,4 @@
-# Diagram authoring
+# Diagramming
 
 Experimental release candidate: a portable agent skill and deterministic SVG export toolkit. The repository root is the installable skill folder. Keep its instructions usable across harnesses; product-specific invocation belongs in the README.
 

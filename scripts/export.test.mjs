@@ -1,4 +1,4 @@
-// diagram-authoring export pipeline — runtime tests (node:test).
+// diagramming export pipeline — runtime tests (node:test).
 // Covers CLI parsing, input validation, overwrite refusal, offline font
 // embedding (including rejection of invalid font files and undecodable faces),
 // preview behavior in normal, no-JS and reduced-motion browser contexts,
@@ -847,7 +847,7 @@ test('SKILL.md frontmatter is valid and its referenced resources exist', async (
   const skill = fs.readFileSync(path.join(HERE, '..', 'SKILL.md'), 'utf8');
   const m = /^---\n([\s\S]*?)\n---\n/.exec(skill);
   assert.ok(m, 'SKILL.md starts with a frontmatter block');
-  assert.match(m[1], /^name: diagram-authoring$/m);
+  assert.match(m[1], /^name: diagramming$/m);
   assert.match(m[1], /^description: \S.*$/m);
   assert.match(m[1], /short-description: \S.*$/m);
   for (const ref of ['references/authoring.md', 'references/export.md', 'assets/arrival.svg',

@@ -1,11 +1,11 @@
 ---
-name: diagram-authoring
+name: diagramming
 description: Create legible still and animated explanatory diagrams with standalone SVG, an offline HTML preview, PNG and MP4 outputs. Use for information flows, document changes, decisions, branching, convergence and accumulation.
 metadata:
   short-description: Experimental SVG diagram authoring and export
 ---
 
-# Diagram authoring
+# Diagramming
 
 Status: experimental. This skill ships SVG examples, licensed fonts and a tested SVG/PNG/MP4 exporter. A passing render does not prove that a diagram explains its subject, and nothing here authorizes publication by itself.
 
