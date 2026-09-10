@@ -8,6 +8,10 @@ The animated version: [examples/arrival/scene.mp4](examples/arrival/scene.mp4) (
 
 More examples: [convergence](examples/convergence/scene.png) (two drafts merge into one summary, animated) and [branching](examples/branching/scene.png) (a static diagram with two outcomes).
 
+## More examples
+
+[Animated diagram studies on igorschwarzmann.com](https://igorschwarzmann.com/experiments/diagramming/) include interactive previews, MP4 videos and full-size stills. These examples use Igor Schwarzmann's personal design system; this repository ships neutral defaults that you can adapt to your own.
+
 ## What this lets you do
 
 Start with the claim a reader should understand, the objects, the relationships and the change. Author the complete settled state in plain SVG, then add declarative SMIL animation. An agent or a person with a text editor can revise the source; the exporter produces stills and video for review.
